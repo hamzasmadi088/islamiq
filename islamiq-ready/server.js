@@ -185,7 +185,7 @@ app.post("/api/memory/clear", auth, (req, res) => {
 async function updateLongMemory({ userId, oldMemory, userMessage, assistantText }) {
   try {
     const msg = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
+      model: "claude-sonnet-4-6",
       max_tokens: 350,
       system: "أنت تلخص ذاكرة طويلة المدى لمساعد. لا تحفظ معلومات حساسة إلا إذا كانت تفضيلات استخدام واضحة. أعد نصاً عربياً قصيراً فقط.",
       messages: [{
@@ -223,7 +223,7 @@ app.post("/api/chat", auth, async (req, res) => {
     const history = db.prepare("SELECT role, content FROM messages WHERE chat_id = ? ORDER BY id ASC LIMIT 30").all(chat.id);
 
     const ai = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
+      model: "claude-sonnet-4-6",
       max_tokens: 1800,
       system: buildSystemPrompt({ madhab, memory: user.memory }),
       messages: history
