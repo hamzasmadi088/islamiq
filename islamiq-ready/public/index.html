@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IslamiQ Ready</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F1EA;--panel:#fff;--sidebar:#2D4A3E;--accent:#C9A961;--primary:#1F3A2E;--text:#2A2622;--soft:#6B6157;--border:#E5DDD0;--danger:#b42318}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Cairo,sans-serif;background:var(--bg);color:var(--text);height:100vh;overflow:hidden}.app{display:flex;height:100vh}.sidebar{width:285px;background:var(--sidebar);color:#E8DFC9;display:flex;flex-direction:column}.brand{padding:18px;display:flex;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.1)}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#A8893E);display:grid;place-items:center;color:var(--sidebar);font-weight:800;font-family:"Reem Kufi"}.brand h2{font-size:18px;font-family:"Reem Kufi"}.new{margin:14px;padding:12px;border-radius:12px;border:1px solid rgba(201,169,97,.3);background:rgba(201,169,97,.13);color:#E8DFC9;cursor:pointer;font-family:inherit}.box{margin:0 14px 12px;padding:12px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.04)}label{font-size:12px;opacity:.7}select,input,textarea,button{font-family:inherit}.box select{width:100%;margin-top:6px;background:transparent;color:#E8DFC9;border:none;outline:none}.box option{background:#2D4A3E}.chats{flex:1;overflow:auto;padding:8px}.chat{padding:10px 12px;border-radius:10px;cursor:pointer;margin-bottom:4px;display:flex;justify-content:space-between;gap:8px}.chat:hover,.chat.active{background:rgba(201,169,97,.14);color:var(--accent)}.chat small{opacity:.55}.footer{padding:14px;border-top:1px solid rgba(255,255,255,.1);font-size:13px}.footer button{margin-top:8px;width:100%;padding:8px;border:0;border-radius:9px;cursor:pointer}.main{flex:1;display:flex;flex-direction:column;min-width:0}.top{height:66px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px}.title{font-family:"Reem Kufi";font-weight:600}.badge{font-size:12px;background:rgba(45,74,62,.08);padding:4px 9px;border-radius:99px;color:var(--primary)}.messages{flex:1;overflow:auto;padding:28px}.welcome{text-align:center;max-width:720px;margin:8vh auto}.bism{font-family:Amiri,serif;font-size:32px;color:#A8893E;margin-bottom:16px}.welcome h1{font-family:"Reem Kufi";font-size:34px;color:var(--primary);margin-bottom:10px}.welcome p{color:var(--soft);line-height:1.9}.suggestions{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.suggestion{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;text-align:right;cursor:pointer}.suggestion:hover{border-color:var(--accent)}.msg{max-width:850px;margin:0 auto 22px;display:flex;gap:12px;align-items:flex-start}.msg.user{flex-direction:row-reverse}.avatar{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-weight:700;flex-shrink:0}.assistant .avatar{background:var(--primary);color:var(--accent)}.user .avatar{background:var(--accent);color:white}.bubble{line-height:1.9;font-size:15px}.user .bubble{background:var(--primary);color:white;padding:11px 15px;border-radius:14px}.name{font-size:12px;color:var(--soft);margin-bottom:4px}.quran{font-family:Amiri,serif;font-size:19px;color:var(--primary);background:rgba(201,169,97,.09);padding:14px 18px;border-right:3px solid var(--accent);border-radius:8px;margin:12px 0}.hadith{font-family:Amiri,serif;font-size:17px;background:#EFE9DD;padding:14px 18px;border-right:3px solid var(--primary);border-radius:8px;margin:12px 0}.source-tag{display:inline-block;font-size:12px;color:#A8893E;background:rgba(201,169,97,.12);padding:3px 10px;border-radius:99px}.inputArea{border-top:1px solid var(--border);padding:16px 24px 20px}.inputWrap{max-width:850px;margin:auto;background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:12px}.inputWrap:focus-within{border-color:var(--accent)}textarea{width:100%;border:0;outline:0;resize:none;font-size:15px;min-height:26px;max-height:180px;background:transparent;color:var(--text)}.toolbar{display:flex;justify-content:space-between;margin-top:8px}.tools{display:flex;gap:6px}.icon,.send{border:0;border-radius:10px;cursor:pointer}.icon{width:34px;height:34px;background:#F0EBE0;color:var(--soft)}.send{width:38px;height:38px;background:var(--primary);color:var(--accent)}.send:disabled{opacity:.35}.auth{position:fixed;inset:0;background:rgba(31,58,46,.38);display:grid;place-items:center;z-index:50}.authCard{width:min(420px,92vw);background:#fff;border-radius:22px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.18)}.authCard h2{font-family:"Reem Kufi";color:var(--primary);margin-bottom:6px}.authCard p{color:var(--soft);font-size:14px;margin-bottom:16px}.field{margin-bottom:10px}.field input{width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;outline:0}.primaryBtn{width:100%;padding:12px;border:0;border-radius:12px;background:var(--primary);color:var(--accent);cursor:pointer;margin-top:6px}.linkBtn{background:transparent;border:0;color:#A8893E;cursor:pointer;margin-top:10px}.err{color:var(--danger);font-size:13px;margin-top:8px;min-height:20px}.hidden{display:none!important}@media(max-width:780px){.sidebar{position:absolute;right:0;top:0;bottom:0;z-index:20;transform:translateX(100%)}.sidebar.open{transform:translateX(0)}.suggestions{grid-template-columns:1fr}.messages{padding:18px}.welcome h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="auth" id="auth">
+  <div class="authCard">
+    <h2 id="authTitle">تسجيل الدخول</h2>
+    <p>ادخل لحفظ محادثاتك وذاكرتك الطويلة.</p>
+    <div class="field" id="nameField" style="display:none"><input id="name" placeholder="الاسم"></div>
+    <div class="field"><input id="email" placeholder="الإيميل" type="email"></div>
+    <div class="field"><input id="password" placeholder="كلمة السر" type="password"></div>
+    <button class="primaryBtn" onclick="submitAuth()">دخول</button>
+    <button class="linkBtn" onclick="toggleAuthMode()" id="switchAuth">إنشاء حساب جديد</button>
+    <div class="err" id="authErr"></div>
+  </div>
+</div>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">ا</div><h2>IslamiQ</h2></div>
+    <button class="new" onclick="newChat()">+ محادثة جديدة</button>
+    <div class="box">
+      <label>المذهب الفقهي</label>
+      <select id="madhab">
+        <option value="all">الأربعة مع المقارنة</option>
+        <option value="hanafi">الحنفي</option>
+        <option value="maliki">المالكي</option>
+        <option value="shafii">الشافعي</option>
+        <option value="hanbali">الحنبلي</option>
+      </select>
+    </div>
+    <div class="box">
+      <label>الذاكرة الطويلة</label>
+      <p id="memoryPreview" style="font-size:12px;line-height:1.7;margin-top:6px;opacity:.85">...</p>
+      <button onclick="clearMemory()" style="margin-top:8px;padding:7px;border:0;border-radius:8px;cursor:pointer">مسح الذاكرة</button>
+    </div>
+    <div class="chats" id="chats"></div>
+    <div class="footer">
+      <div id="userInfo">...</div>
+      <button onclick="logout()">تسجيل خروج</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div class="title">IslamiQ — مساعدك الإسلامي</div>
+      <span class="badge" id="status">متصل</span>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="welcome" id="welcome">
+        <div class="bism">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <h1>السلام عليكم، كيف يمكنني مساعدتك؟</h1>
+        <p>مساعد إسلامي يحفظ محادثاتك ويفهم تفضيلاتك مع الوقت. للفتاوى المهمة راجع أهل العلم.</p>
+        <div class="suggestions">
+          <div class="suggestion" onclick="sendSuggestion('ما هي أركان الصلاة وشروط صحتها؟')">ما هي أركان الصلاة وشروط صحتها؟</div>
+          <div class="suggestion" onclick="sendSuggestion('فسّر لي سورة الإخلاص بإيجاز')">فسّر لي سورة الإخلاص بإيجاز</div>
+          <div class="suggestion" onclick="sendSuggestion('ما حكم زكاة المال ونصابها؟')">ما حكم زكاة المال ونصابها؟</div>
+          <div class="suggestion" onclick="sendSuggestion('أذكر لي أدعية مأثورة من القرآن الكريم')">أدعية مأثورة من القرآن الكريم</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inputArea">
+      <div class="inputWrap">
+        <textarea id="input" rows="1" placeholder="اسأل عن أي مسألة شرعية..." oninput="autoResize(this);toggleSend()" onkeydown="keyDown(event)"></textarea>
+        <div class="toolbar">
+          <div class="tools">
+            <button class="icon" onclick="startRecording()" title="صوت">🎤</button>
+            <button class="icon" onclick="copyLast()" title="نسخ">⧉</button>
+            <button class="icon" onclick="newChat()" title="جديد">🧹</button>
+          </div>
+          <button class="send" id="send" onclick="sendMessage()" disabled>➤</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+let token = localStorage.getItem("islamiq_token");
+let user = null;
+let registerMode = false;
+let currentChatId = null;
+let isSending = false;
+
+const $ = id => document.getElementById(id);
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text || "";
+  return div.innerHTML;
+}
+
+function processResponse(text) {
+  if (text.includes('<div class="quran">') || text.includes('<div class="hadith">') || text.includes("<p>")) return text;
+  let html = escapeHtml(text);
+  html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  return html.split(/\n\n+/).map(p => `<p>${p.replace(/\n/g, "<br>")}</p>`).join("");
+}
+
+async function api(path, options = {}) {
+  const res = await fetch(path, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: "Bearer " + token } : {}),
+      ...(options.headers || {})
+    }
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || data.details || "خطأ غير معروف");
+  return data;
+}
+
+function toggleAuthMode() {
+  registerMode = !registerMode;
+  $("authTitle").textContent = registerMode ? "إنشاء حساب" : "تسجيل الدخول";
+  $("nameField").style.display = registerMode ? "block" : "none";
+  $("switchAuth").textContent = registerMode ? "عندي حساب بالفعل" : "إنشاء حساب جديد";
+  $("authErr").textContent = "";
+}
+
+async function submitAuth() {
+  try {
+    $("authErr").textContent = "";
+    const path = registerMode ? "/api/auth/register" : "/api/auth/login";
+    const body = {
+      email: $("email").value.trim(),
+      password: $("password").value,
+      name: $("name").value.trim()
+    };
+    const data = await api(path, { method: "POST", body: JSON.stringify(body) });
+    token = data.token;
+    user = data.user;
+    localStorage.setItem("islamiq_token", token);
+    $("auth").classList.add("hidden");
+    await boot();
+  } catch (e) {
+    $("authErr").textContent = e.message;
+  }
+}
+
+function logout() {
+  localStorage.removeItem("islamiq_token");
+  location.reload();
+}
+
+async function boot() {
+  if (!token) {
+    $("auth").classList.remove("hidden");
+    return;
+  }
+  try {
+    const me = await api("/api/me");
+    user = me.user;
+    $("auth").classList.add("hidden");
+    $("userInfo").textContent = `${user.name} — ${user.email}`;
+    $("memoryPreview").textContent = user.memory || "لا توجد ذاكرة محفوظة بعد.";
+    await loadChats();
+  } catch {
+    localStorage.removeItem("islamiq_token");
+    $("auth").classList.remove("hidden");
+  }
+}
+
+async function loadChats() {
+  const data = await api("/api/chats");
+  $("chats").innerHTML = "";
+  data.chats.forEach(c => {
+    const div = document.createElement("div");
+    div.className = "chat" + (c.id === currentChatId ? " active" : "");
+    div.innerHTML = `<span>${escapeHtml(c.title)}</span><small>›</small>`;
+    div.onclick = () => openChat(c.id);
+    $("chats").appendChild(div);
+  });
+}
+
+async function openChat(id) {
+  const data = await api(`/api/chats/${id}/messages`);
+  currentChatId = data.chat.id;
+  $("messages").innerHTML = "";
+  data.messages.forEach(m => addMessage(m.role, m.content, m.role === "assistant"));
+  await loadChats();
+}
+
+function newChat() {
+  currentChatId = null;
+  $("messages").innerHTML = `<div class="welcome" id="welcome">
+    <div class="bism">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <h1>السلام عليكم، كيف يمكنني مساعدتك؟</h1>
+    <p>اكتب سؤالك، وسيتم حفظ المحادثة تلقائياً بعد أول رد.</p>
+  </div>`;
+}
+
+function addMessage(role, content, isHtml=false) {
+  const msg = document.createElement("div");
+  msg.className = `msg ${role}`;
+  msg.innerHTML = `
+    <div class="avatar">${role === "user" ? "م" : "ا"}</div>
+    <div>
+      <div class="name">${role === "user" ? "أنت" : "IslamiQ"}</div>
+      <div class="bubble">${isHtml ? processResponse(content) : escapeHtml(content).replace(/\n/g,"<br>")}</div>
+    </div>`;
+  $("messages").appendChild(msg);
+  $("messages").scrollTop = $("messages").scrollHeight;
+}
+
+function showTyping() {
+  const t = document.createElement("div");
+  t.className = "msg assistant";
+  t.id = "typing";
+  t.innerHTML = `<div class="avatar">ا</div><div><div class="name">IslamiQ</div><div class="bubble">يكتب...</div></div>`;
+  $("messages").appendChild(t);
+}
+
+function removeTyping() {
+  const t = $("typing");
+  if (t) t.remove();
+}
+
+async function sendMessage() {
+  const text = $("input").value.trim();
+  if (!text || isSending) return;
+  isSending = true;
+  toggleSend();
+  $("welcome")?.remove();
+  addMessage("user", text);
+  $("input").value = "";
+  autoResize($("input"));
+  showTyping();
+
+  try {
+    const data = await api("/api/chat", {
+      method: "POST",
+      body: JSON.stringify({
+        chatId: currentChatId,
+        message: text,
+        madhab: $("madhab").value
+      })
+    });
+    currentChatId = data.chatId;
+    removeTyping();
+    addMessage("assistant", data.answer, true);
+    speak(stripHtml(data.answer));
+    await loadChats();
+    const me = await api("/api/me");
+    $("memoryPreview").textContent = me.user.memory || "لا توجد ذاكرة محفوظة بعد.";
+  } catch(e) {
+    removeTyping();
+    addMessage("assistant", `<p style="color:#b42318"><strong>تعذر الإرسال:</strong> ${escapeHtml(e.message)}</p>`, true);
+  } finally {
+    isSending = false;
+    toggleSend();
+    $("input").focus();
+  }
+}
+
+function sendSuggestion(text) {
+  $("input").value = text;
+  toggleSend();
+  sendMessage();
+}
+
+function keyDown(e) {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+}
+
+function autoResize(el) {
+  el.style.height = "auto";
+  el.style.height = Math.min(el.scrollHeight, 180) + "px";
+}
+
+function toggleSend() {
+  $("send").disabled = !$("input").value.trim() || isSending;
+}
+
+function copyLast() {
+  const bubbles = document.querySelectorAll(".msg.assistant .bubble");
+  if (!bubbles.length) return alert("لا توجد إجابة");
+  navigator.clipboard.writeText(bubbles[bubbles.length - 1].innerText);
+  alert("تم النسخ");
+}
+
+function stripHtml(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.innerText;
+}
+
+function speak(text) {
+  if (!window.speechSynthesis) return;
+  const s = new SpeechSynthesisUtterance(text.slice(0, 800));
+  s.lang = "ar-SA";
+  s.rate = 1;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(s);
+}
+
+function startRecording() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) return alert("المتصفح لا يدعم التسجيل الصوتي. جرّب Chrome.");
+  const rec = new SpeechRecognition();
+  rec.lang = "ar-SA";
+  rec.interimResults = false;
+  rec.onresult = e => {
+    $("input").value = e.results[0][0].transcript;
+    toggleSend();
+  };
+  rec.onerror = () => alert("تعذر التسجيل الصوتي");
+  rec.start();
+}
+
+async function clearMemory() {
+  if (!confirm("مسح الذاكرة الطويلة؟")) return;
+  await api("/api/memory/clear", { method: "POST", body: "{}" });
+  $("memoryPreview").textContent = "لا توجد ذاكرة محفوظة بعد.";
+}
+
+window.addEventListener("load", boot);
+</script>
+</body>
+</html>
